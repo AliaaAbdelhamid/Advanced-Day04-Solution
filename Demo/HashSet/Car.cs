@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Demo.HashSet
 {
-	internal class Car : IEquatable<Car>
+	internal class Car : IEquatable<Car> , IComparable<Car>
 	{
+		public int CompareTo(Car? other)
+		{
+			if (other is null) return 1;
+			return Code.CompareTo(other.Code);
+		}
+
 		public override int GetHashCode()
 		{
 			return HashCode.Combine(Code, Model, Speed);

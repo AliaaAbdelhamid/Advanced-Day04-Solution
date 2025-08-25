@@ -2,6 +2,7 @@
 using Demo.HashSet;
 using Demo.HashTable;
 using Demo.SortedDictionary;
+using Demo.SortedSet;
 using System.Collections;
 
 namespace Demo
@@ -350,7 +351,7 @@ namespace Demo
 			//HashSet<int> number02 = new HashSet<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 			//bool Result;
 			//// Add ITEM to the set, return true if added, false if duplicate
-		 //   Result = number01.Add(100); // 1 2 3 4 5 100 -  True
+			//   Result = number01.Add(100); // 1 2 3 4 5 100 -  True
 
 			////union with the other
 			//number01.UnionWith(number02); // 1 2 3 4 5 11 6 7 8 9 10
@@ -404,6 +405,78 @@ namespace Demo
 			#endregion
 
 			#endregion
+
+
+			#region Generic - SortedSet 
+
+			#region Example 01
+			//SortedSet<int> Numbers = new SortedSet<int>(new IntDescComparer()) { 4, 5, 7, 8, 9, 1, 2, 3, 10 };
+			//// 10 9 8 7 6 5 4 3 2 1
+
+			////int Max = Numbers.Max(); // 10
+			////int Min = Numbers.Min(); // 1
+
+			//var NumbersInRange = Numbers.GetViewBetween(8, 4); // 8 7 6 5 4
+
+			//foreach (int item in Numbers)
+			//	Console.Write($"{item} ");
+			//Console.WriteLine("\n=================");
+			//foreach (int item in NumbersInRange)
+			//	Console.Write($"{item} ");
+
+			//if (Numbers.Remove(5))
+			//{
+			//	Numbers.Add(50);
+			//}
+
+			//Console.WriteLine("\nAfter Change ");
+
+			//foreach (int item in Numbers)
+			//	Console.Write($"{item} ");
+			//Console.WriteLine("\n=================");
+			//foreach (int item in NumbersInRange)
+			//	Console.Write($"{item} ");
+
+
+			#endregion
+
+			#region Example 02
+
+			//SortedSet<Car> cars = new SortedSet<Car>(); 
+			//cars.Add(new Car(2, "BYD", 250));
+			//cars.Add(new Car(1, "BMW", 290));
+			//cars.Add(new Car(3, "Audi", 290));
+			//cars.Add(new Car(4, "Kia", 290));
+			//cars.Add(new Car(5, "Toyota", 290));
+
+
+			////foreach (var item in cars)
+			////	Console.WriteLine(item);
+			//// 1 :: BMW :: 290
+			//// 2 :: BYD :: 250
+			//// 3 :: Audi :: 290
+			//// 4 :: Kia :: 290
+			//// 5 :: Toyota :: 290
+
+			//Car? Min = cars.Min; // 1 :: BMW :: 290
+			//Car? Max = cars.Max; // 3 :: Audi :: 290
+			//Console.WriteLine(Min); // 1 :: BMW :: 290
+			//Console.WriteLine(Max); // 5 :: Toyota :: 290
+			//SortedSet<Car> CarsRange = cars.GetViewBetween(new Car(2, "BYD", 250), new Car(4, "Kia", 290));
+
+			//Console.WriteLine("=======================");
+			//foreach (var item in CarsRange)
+			//	Console.WriteLine(item);
+			//// 2 :: BYD :: 250
+			//// 3 :: Audi :: 290
+			//// 4 :: Kia :: 290
+
+
+
+			#endregion
+
+			#endregion
+
 
 		}
 	}
