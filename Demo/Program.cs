@@ -1,4 +1,5 @@
 ﻿using Demo.Dictionary;
+using Demo.HashSet;
 using Demo.HashTable;
 using Demo.SortedDictionary;
 using System.Collections;
@@ -267,6 +268,140 @@ namespace Demo
 			//Console.WriteLine(PhoneNumber); // 111
 
 
+
+			#endregion
+
+			#region Generic - HashSet
+
+			#region Example 01
+
+			//HashSet<string> names = new HashSet<string>();
+			//names.Add("Ahmed");
+			//names.Add("Omar");
+			//names.Add("Yasmin");
+			//names.Add("Yasmin");
+			//names.Add("ahmed");
+
+			//foreach (string item in names)
+			//	Console.WriteLine(item);
+			//// Ahmed
+			//// Omar
+			//// Yasmin
+			//// ahmed 
+
+			#endregion
+
+			#region Example 02
+
+			//HashSet<Employee?> Employees = new()
+			//{
+			//	new Employee(10, "Omar", 10000),
+			//	new Employee(20, "Salma", 5000),
+			//	new Employee(10, "Omar", 10000),
+			//	new Employee(30, "Ahmed", 9000),
+			//	new Employee(10, "Omar", 10000),
+			//	new Employee(30, "Ahmed", 9000),
+			//	new Employee(20, "Salma", 5000),
+			//};
+
+			//foreach (Employee? item in Employees)
+			//	Console.WriteLine(item);
+			////Id = 10 , name = Omar , Salary = 10000
+			////Id = 20 , name = Salma , Salary = 5000
+			////Id = 30 , name = Ahmed , Salary = 9000
+
+			#endregion
+
+			#region Example 03
+
+			//HashSet<Car> cars = new HashSet<Car>(new CarEqualityComparer());
+			//cars.Add(new Car(1, "BMW", 290));
+			//cars.Add(new Car(1, "BMW", 190));
+			//cars.Add(new Car(1, "BMW", 250));
+			//cars.Add(new Car(2, "BYD", 250));
+			//cars.Add(new Car(3, "Audi", 290));
+
+			//foreach (Car item in cars)
+			//	Console.WriteLine(item);
+			//               // 1 :: BMW :: 290
+			//               // 2 :: BYD :: 250
+			//               // 3 :: Audi :: 290
+
+
+
+
+			//Car[] cars1 =
+			//{
+			//	new Car(1, "BMW", 290),
+			//	new Car(3, "Audi", 290),
+			//	new Car(2, "BYD", 250),
+			//	new Car(3, "Audi", 290),
+			//	new Car(1, "BMW", 290),
+			//	new Car(2, "BYD", 250),
+			//};
+
+
+			//cars = new HashSet<Car>(cars1);
+
+			#endregion
+
+			#region Example 04
+			//HashSet<int> number01 = new HashSet<int>() { 1, 2, 3, 4, 5 ,11};
+			//HashSet<int> number02 = new HashSet<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+			//bool Result;
+			//// Add ITEM to the set, return true if added, false if duplicate
+		 //   Result = number01.Add(100); // 1 2 3 4 5 100 -  True
+
+			////union with the other
+			//number01.UnionWith(number02); // 1 2 3 4 5 11 6 7 8 9 10
+
+			//// its intersection with Other
+			//number01.IntersectWith(number02); // 1 2 3 4 5
+
+			//// it contains no elements that are also in other
+			//number01.ExceptWith(number02); //11 
+
+			//// it contains elements initially in this or in other, but not both
+			//number01.SymmetricExceptWith(number02); // 10 9 8 7 6 11
+
+			//// Check if this set is a subset of other
+			//Result = number01.IsSubsetOf(number02); // False Because 11 
+			//Console.WriteLine(Result);
+			//// True If all elements in the current set exist
+			//// True If both sets are equal
+
+
+			//// Check if this set is a subset of other , but not the same as it
+			//Result = number01.IsProperSubsetOf(number02); // False 
+			//Console.WriteLine(Result);
+			//// True If all elements in the current set exist
+			//// False If both sets are equal
+
+			//// Check if this set is a superset of other
+			//Result = number01.IsSupersetOf(number02); // False 
+
+			//// Check if this set is a superset of other , but not the same as it
+			//Result = number01.IsProperSupersetOf(number02); // False 
+
+			//// Check if this set has any elements in common with other
+			//Result = number01.Overlaps(number02); // True 
+			//// true if at least one element exists in both sets.
+			//// false if no elements are shared.
+
+			//// Check if this set contains the same and only the same elements as other
+			//Result = number01.SetEquals(number02); // False
+			//// true if the sets have the same elements (order doesn't matter).
+			//// false if there's any difference (missing or extra elements).
+
+			//Console.WriteLine("Numbers01");
+			//foreach (int item in number01)
+			//	Console.Write($"{item} ");
+			//Console.WriteLine("\n============================");
+
+			//Console.WriteLine("Numbers02");
+			//foreach (int item in number02)
+			//	Console.Write($"{item} ");
+			#endregion
 
 			#endregion
 
