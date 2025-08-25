@@ -1,5 +1,6 @@
 ﻿using Demo.Dictionary;
 using Demo.HashTable;
+using Demo.SortedDictionary;
 using System.Collections;
 
 namespace Demo
@@ -185,6 +186,90 @@ namespace Demo
 			#endregion
 
 			#endregion
+
+			#region Generic - SortedDictionary 
+
+			#region Example 01
+			//SortedDictionary<string, int> PhoneNote = new SortedDictionary<string, int>(new SortedDictionary.StringComparer())
+			//{
+			//	["Salma"] = 111,
+			//	["Omar"] = 222,
+			//	["Rawan"] = 333,
+			//	["Yasmin"] = 444,
+			//	["Amr"] = 555
+			//};
+
+			//foreach (KeyValuePair<string, int> item in PhoneNote)
+			//	Console.WriteLine(item);
+			//// [Yasmin, 444]
+			//// [Salma, 111]
+			//// [Rawan, 333]
+			//// [Omar, 222]
+			//// [Amr, 555] 
+
+			#endregion
+
+			#region Example 02
+			//Employee employee01 = new Employee(10, "Omar", 10000);
+			//Employee employee02 = new Employee(20, "Salma", 5000);
+			//Employee employee03 = new Employee(30, "Ahmed", 9000);
+
+			//SortedDictionary<Employee, string?> SortedEmployees = new(new EmployeeNameComparer())
+			//{
+			//	[employee02] = "2nd",
+			//	[employee03] = "3rd",
+			//	[employee01] = "1st",
+			//}; 
+
+
+			//foreach (var item in SortedEmployees)
+			//	Console.WriteLine(item);
+			//// [Id = 30 , name = Ahmed , Salary = 9000, 3rd]
+			//// [Id = 10 , name = Omar , Salary = 10000, 1st]
+			//// [Id = 20 , name = Salma , Salary = 5000, 2nd]
+
+
+			#endregion
+
+			#endregion
+
+			#region Generic - SortedList
+
+			//SortedList<string, int> PhoneBook = new SortedList<string, int>()
+			//{
+			//	["Salma"] = 111,
+			//	["Rawan"] = 333,
+			//	["Yasmin"] = 444,
+			//	["Omar"] = 222,
+			//	["Amr"] = 555
+			//};
+
+			//foreach (var phone in PhoneBook)
+			//	Console.WriteLine(phone);
+			//// [Amr, 555]
+			//// [Omar, 222]
+			//// [Rawan, 333]
+			//// [Salma, 111]
+			//// [Yasmin, 444]
+
+			//int value = PhoneBook.GetValueAtIndex(1); 
+			//string key = PhoneBook.GetKeyAtIndex(1); 
+			//Console.WriteLine("================");
+			//Console.WriteLine(value); // 222
+			//Console.WriteLine(key); // Omar
+
+
+
+			//for (int i = 0; i < PhoneBook.Count; i++)
+			//	Console.WriteLine(PhoneBook[i]); // Invalid [string (Key)]
+
+			//int PhoneNumber = PhoneBook["Salma"];
+			//Console.WriteLine(PhoneNumber); // 111
+
+
+
+			#endregion
+
 		}
 	}
 }

@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Demo.Dictionary
 {
-	internal class Employee
+	internal class Employee : IComparable<Employee>
 	{
+		public int CompareTo(Employee? other)
+		{
+			if (other is null) return 1;
+			return Id.CompareTo(other.Id);
+		}
+
 		public override bool Equals(object? obj)
 		{
 			return obj is Employee employee &&
